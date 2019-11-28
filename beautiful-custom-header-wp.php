@@ -234,11 +234,6 @@ function VM_CUSTOMIZE_REGISTER( $wp_customize ) {
 	$wp_customize->add_setting( 'logo_scroll', array( 'transport' => 'refresh' ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo_scroll', array( 'label' => __( 'LOGO Scroll', 'theme_name' ), 'section' => 'logo_area', 'settings' => 'logo_scroll', 'context' => 'logo_scroll' )));
 
-	$wp_customize->add_section( 'property_spage', array( 'title' => __( 'Property Search Page', 'bb' ), 'priority' => 120, ) );
-
-	$wp_customize->add_setting( 'pp_url', array( 'transport' => 'refresh' ) );
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'pp_url', array( 'label' => __( 'Property Page URL', 'theme_name' ), 'section' => 'property_spage', 'settings' => 'pp_url', 'type' => 'text' )));
-
 
 
 } add_action( 'customize_register', 'VM_CUSTOMIZE_REGISTER' ); ?>
